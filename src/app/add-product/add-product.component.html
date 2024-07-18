@@ -1,0 +1,53 @@
+<h2>Add Product</h2>
+
+<form [formGroup]="AddProduct" (ngSubmit)="onSubmit()" class="needs-validation">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title:</label>
+    <input type="text" id="title" formControlName="title" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description:</label>
+    <input type="text" id="description" formControlName="description" class="form-control" required>
+  </div>
+ 
+  <div class="mb-3">
+    <label for="category" class="form-label">Category:</label>
+    <select class="form-select" formControlName="categories" id="category" name="category" required>
+      <option value="1">Cookies</option>
+      <option value="2">Glucose & Milk</option>
+      <option value="4">Cream Biscuits</option>
+      <option value="3">Bakeware</option>
+      <option value="8">Cookware</option>
+      <option value="9">Kitchen Appliances</option>
+      <option value="5">Wheat & Wheat Product</option>
+      <option value="6">Rice & Rice Product</option>
+      <option value="7">Dal & Pulses</option>
+    </select>
+  </div>
+  
+  <div class="mb-3">
+    <label for="offer" class="form-label">Offer:</label>
+    <select class="form-select" id="offer" formControlName="offer" name="offer" required>
+      <option value="1">Diwali Dhamaka</option>
+      <option value="2">Christmas Sale</option>
+      <option value="3">August Special</option>
+      <option value="4">Crazy Shopping Sale</option>
+      <option value="5">Holi Sale</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Price:</label>
+    <input type="number" id="price" formControlName="price" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="quantity" class="form-label">Quantity:</label>
+    <input type="number" id="quantity" formControlName="quantity" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="imageName" class="form-label">Image Name:</label>
+    <input type="text" id="imageName" formControlName="imageName" class="form-control">
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary">Add Product</button>
+  </div>
+</form>

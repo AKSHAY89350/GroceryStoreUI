@@ -1,0 +1,19 @@
+<div class="search-container">
+    <input type="text" [(ngModel)]="query" placeholder="Enter search query" class="search-input">
+    <button (click)="onSearch()" class="search-button">Search</button>
+  </div>
+  
+  <div class="search-results-container">
+    <div class="search-card" *ngFor="let product of searchResults">
+      <div>
+        <img [src]="'../../assets/Images/' + product.productCategory.subCategory + '/' + product.id + '/' + imageIndex + '.jpg'"
+             alt="Product Image" class="search-card-image" OpenProductDetails [productId]="product.id">
+        <h3 class="search-card-title">{{ product.title }}</h3>
+        <p class="search-card-description">{{ product.description }}</p>
+      </div>
+      <div>
+        <p class="search-card-price">{{ product.price }}</p>
+      </div>
+    </div>
+  </div>
+  

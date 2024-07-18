@@ -1,0 +1,39 @@
+<form [formGroup]="UpdateProduct" (ngSubmit)="onSubmit()" class="bootstrap-form">
+
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" id="title" formControlName="title" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="description" formControlName="description" class="form-control" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="categories">Categories:</label>
+    <input type="number" id="categories" formControlName="categories" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="offer">Offer:</label>
+    <input type="number" id="offer" formControlName="offer" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="number" id="price" formControlName="price" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" formControlName="quantity" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="imageName">Image Name:</label>
+    <input type="text" id="imageName" formControlName="imageName" class="form-control" required>
+  </div>
+
+  <button type="submit" [disabled]="UpdateProduct.invalid" class="btn btn-primary">Update Product</button>
+</form>
